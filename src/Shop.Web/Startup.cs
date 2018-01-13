@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Shop.Web.Framework;
 
 namespace Shop.Web
 {
@@ -37,8 +38,9 @@ namespace Shop.Web
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
 
+            app.UseStaticFiles();
+            app.UseMyMiddleware();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
