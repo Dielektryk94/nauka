@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Shop.Web.Framework;
 using Shop.Core.Repositories;
 using Shop.Core.Services;
+using Shop.Web.Framework;
 
 namespace Shop.Web
 {
@@ -41,7 +41,6 @@ namespace Shop.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
 
             app.UseStaticFiles();
             app.UseMyMiddleware();
